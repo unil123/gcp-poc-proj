@@ -7,7 +7,7 @@ on:
       - 'terraform/modules/gcs-buckets/**'
       - 'terraform/gcs-buckets/env/**'
       - '.github/workflows/gcs-buckets-ci-validation.yml'
-      - '.github/workflows/gcs-buckets-cd-apply.yml'
+      - '.github/workflows/gcs-buckets-cd-deploy.yml'
 
 permissions:
   contents: read
