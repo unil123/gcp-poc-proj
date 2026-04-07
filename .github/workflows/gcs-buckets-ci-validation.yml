@@ -7,12 +7,12 @@ on:
       - 'terraform/modules/gcs-buckets/**'
       - 'terraform/gcs-buckets/env/**'
       - '.github/workflows/gcs-buckets-ci-validation.yml'
-      - '.github/workflows/gcs-buckets-cd-apply.yml'
+      - '.github/workflows/gcs-buckets-cd-deploy.yml'
 
 permissions:
   contents: read
-  pull-requests: write
-  id-token: write
+  pull-requests: write 
+  id-token: write 
 
 env:
   TERRAFORM_VERSION: "1.9.8"

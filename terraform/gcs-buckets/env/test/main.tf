@@ -9,3 +9,9 @@ terraform {
     #   -backend-config="prefix=${GCS_BU_TASK_TEST_STATE_PREFIX}" \
   }
 }
+
+# ✅ Decode JSON from GitHub secret
+locals {
+  config = jsondecode(var.gcs_bu_task_test_json)
+
+}
