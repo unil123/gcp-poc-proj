@@ -12,7 +12,7 @@ on:
 permissions:
   contents: read
   pull-requests: write 
-  id-token: write
+  id-token: write 
 
 env:
   TERRAFORM_VERSION: "1.9.8"
