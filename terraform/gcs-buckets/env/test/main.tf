@@ -10,5 +10,5 @@ locals {
 module "gcs_buckets_test" {
   source = "../../../modules/gcs-buckets"
 
-  config = local.config
+  config = local.config 
 }
