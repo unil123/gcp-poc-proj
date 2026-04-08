@@ -6,9 +6,9 @@ locals {
   config = jsondecode(var.gcs_bu_task_test_json)
 }
 
-# Use the gcs-buckets-bu module
+# Use the gcs-buckets module
 module "gcs_buckets_test" {
-  source = "../../../modules/gcs-buckets-bu"
+  source = "../../../modules/gcs-buckets"
 
   config = local.config
 }
