@@ -1,7 +1,11 @@
-# Variable Definitions for Test Environment
+variable "project_id" {
+  type = string
+}
+
+variable "region" {
+  type = string
+}
 
 variable "gcs_bu_task_test_json" {
-  description = "JSON configuration for test environment GCS buckets"
-  type        = string
-  sensitive   = true
+  type = string
 }
