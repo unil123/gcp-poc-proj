@@ -1,6 +1,4 @@
-# Provider Configuration for Test Environment
-
 provider "google" {
-  project = local.config.project_id
-  region  = local.config.location
+  project = var.project_id
+  region  = var.region
 }
