@@ -1,5 +1,5 @@
-# Backend is configured via terraform init in CI
+module "gcs_buckets_test" {
+  source = "../../modules/gcs-buckets"
 
-locals {
   config = jsondecode(var.gcs_bu_task_test_json)
 }
