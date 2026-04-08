@@ -1,14 +1,16 @@
-# Test Environment Configuration
-# This file uses the gcs-buckets-bu module to provision GCS buckets for the test environment
-
-# Parse the JSON configuration from environment variable
 locals {
   config = jsondecode(var.gcs_bu_task_test_json)
 }
 
-# Use the gcs-buckets module
-module "gcs_buckets_test" {
-  source = "../../../modules/gcs-buckets"
+resource "google_storage_bucket" "buckets" {
+  for_each = {
+    for b in local.config.buckets : b.name => b
+  }
 
-  config = local.config 
+  name     = each.value.name
+  location = each.value.location
+
+  versioning {
+    enabled = lookup(each.value, "versioning", false)
+  }
 }
